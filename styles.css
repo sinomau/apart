@@ -1,0 +1,48 @@
+.hero {
+  position: relative;
+  height: 100vh; /* full-screen */
+  background-image: url("img/portada.jpg"); /* Cambiar ruta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45); /* oscuridad */
+  backdrop-filter: blur(1px);
+}
+
+.hero-content {
+  max-width: 700px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 220px;        /* Ajustá este alto si querés más o menos recorte */
+  object-fit: cover;    /* Hace que todas se vean iguales sin deformarse */
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  transition: .3s;
+}
+.swiper-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: blur(8px);
+  transition: filter .4s ease;
+}
+
+/* Cuando la imagen carga, se quita el blur */
+.swiper-img.loaded {
+  filter: blur(0);
+}
